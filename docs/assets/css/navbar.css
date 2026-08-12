@@ -1,0 +1,408 @@
+/* Menu (corpo) */
+.menu {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    padding: 30px;
+    position: fixed;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bg-color);
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.menu::after {
+    content: "";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 2px;
+    background-color: var(--txt-color);
+    transition: var(--transition);
+}
+
+.menu.float {
+    transform: translateY(1rem);
+    width: 50%;
+    border: 2px solid var(--txt-color);
+    border-radius: 30px;
+    z-index: 99;
+}
+
+.menu.float:after {
+    transition: none;
+    width: 0%;
+    height: 0;
+}
+
+.menu:hover::after {
+    width: 100%;
+}
+
+.menu.float:hover::after {
+    width: 0%;
+}
+
+.menu-spacer,
+.menu-icon {
+    width: 100%;
+}
+
+.menu-spacer {
+    display: flex;
+    gap: 30px;
+}
+
+/* Botão do menu responsivo */
+.menu-trigger {
+    display: none;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+/* Botão para trocar de idioma */
+.menu-spacer .btn-lang-switch {
+    position: relative;
+    border-radius: 20px;
+    border: none;
+    font: inherit;
+    cursor: pointer;
+    background-color: var(--bg-color);
+    width: 60px;
+    padding: 4px;
+    box-shadow: 0px 0px 5px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+
+.btn-lang-switch .spn-lang {
+    position: relative;
+    font-size: smaller;
+    width: 50%;
+    color: var(--txt-transparent);
+    border-radius: 12px;
+    transition: var(--transition);
+}
+
+.btn-lang-switch .spn-lang.active {
+    color: var(--txt-color);
+}
+
+[data-theme="dark"] .switch-thumb{
+    background-color: var(--drk-green);
+}
+
+[data-theme="light"] .switch-thumb{
+    background-color: var(--lgt-green);
+}
+
+.switch-thumb {
+    position: absolute;
+    left: 4px;
+    width: 25px;
+    height: 24px;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+/* Itens do menu */
+.menu-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.menu-icon {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.menu-list a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--txt-transparent);
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.menu-list a:hover,
+.menu-list a:focus-visible {
+    transform: translateY(-0.25rem);
+    color: var(--txt-color);
+}
+
+
+.menu-icon a {
+    color: var(--txt-transparent);
+    transition: var(--transition);
+    font-size: 1.5rem;
+}
+
+.menu-icon a:hover,
+.menu-icon a:focus-visible {
+    transform: translateY(-0.25rem);
+    color: var(--txt-color);
+}
+
+.btn-theme {
+    border: none;
+    background-color: transparent;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+    color: var(--txt-transparent);
+}
+
+.btn-theme:hover {
+    transform: translateY(-0.25rem);
+}
+
+.btn-theme:hover .darkmode_icon,
+.btn-theme:hover .darkmode_icon .ray {
+    background: var(--txt-color);
+}
+
+.darkmode_icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: var(--txt-transparent);
+    transform-origin: center center;
+    transition: var(--transition);
+}
+
+.darkmode_icon::after {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    left: 7px;
+    bottom: 4px;
+    border-radius: 10px;
+    background: var(--bg-color);
+    transform-origin: center center;
+    transition: var(--transition);
+}
+
+.darkmode_icon .ray {
+    position: absolute;
+    left: 4.5px;
+    top: 5.5px;
+    width: 7px;
+    height: 5px;
+    border-radius: 50%;
+    transform-origin: center;
+    transition: var(--transition);
+}
+
+.ray:nth-child(1) {
+    transform: rotate(45deg) translateX(0);
+}
+
+.ray:nth-child(2) {
+    transform: rotate(90deg) translateX(0);
+}
+
+.ray:nth-child(3) {
+    transform: rotate(135deg) translateX(0);
+}
+
+.ray:nth-child(4) {
+    transform: rotate(180deg) translateX(0);
+}
+
+.ray:nth-child(5) {
+    transform: rotate(225deg) translateX(0);
+}
+
+.ray:nth-child(6) {
+    transform: rotate(270deg) translateX(0);
+}
+
+.ray:nth-child(7) {
+    transform: rotate(315deg) translateX(0);
+}
+
+.ray:nth-child(8) {
+    transform: rotate(360deg) translateX(0);
+}
+
+[data-theme="light"] {
+    & .darkmode_icon {
+        transform: scale(0.6);
+    }
+
+    & .darkmode_icon::after {
+        left: 15px;
+        bottom: 8px;
+        transform: scale(0);
+    }
+
+    & .ray:nth-child(1) {
+        background: var(--txt-transparent);
+        transform: rotate(45deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(2) {
+        background: var(--txt-transparent);
+        transform: rotate(90deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(3) {
+        background: var(--txt-transparent);
+        transform: rotate(135deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(4) {
+        background: var(--txt-transparent);
+        transform: rotate(180deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(5) {
+        background: var(--txt-transparent);
+        transform: rotate(225deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(6) {
+        background: var(--txt-transparent);
+        transform: rotate(270deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(7) {
+        background: var(--txt-transparent);
+        transform: rotate(315deg) translateX(-16px);
+    }
+
+    & .ray:nth-child(8) {
+        background: var(--txt-transparent);
+        transform: rotate(360deg) translateX(-16px);
+    }
+}
+
+
+/* Responsividade do menu (navbar) */
+@media screen and (max-width: 1024px) {
+    .menu.float{
+        width: 70%;
+    }
+    .menu-list{
+        gap: 15px;
+    }
+    .menu-spacer{
+        gap: 15px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100%;
+        width: 40%;
+        flex-direction: column;
+        border-left: 1px solid var(--txt-color);
+        background-color: var(--bg-color);
+        text-align: center;
+        gap: 30px;
+        z-index: 998;
+        transition: var(--transition);
+    }
+
+    .menu-spacer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-lang-switch{
+        height: 32px;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    .menu.float {
+        transform: translateY(0);
+        border: none;
+        width: 40%;
+        border-left: 1px solid var(--txt-color);
+        border-radius: 0;
+    }
+
+    .menu::after {
+        display: none;
+    }
+
+    .menu-trigger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 24px;
+        height: 24px;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 999;
+    }
+
+    .menu-trigger span {
+        width: 100%;
+        height: 2px;
+        background-color: var(--txt-color);
+        transition: var(--transition);
+        border-radius: 5px;
+    }
+
+    .menu-trigger.clicked {
+        gap: 0;
+    }
+
+    .menu-trigger.clicked span {
+        position: absolute;
+    }
+
+    .menu-trigger.clicked span:nth-child(1) {
+        transform: rotate(45deg);
+    }
+
+    .menu-trigger.clicked span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-trigger.clicked span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .menu-list {
+        flex-direction: column;
+    }
+
+    .menu-icon {
+        flex-direction: column-reverse;
+        width: auto;
+    }
+}

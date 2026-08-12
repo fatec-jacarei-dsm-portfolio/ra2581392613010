@@ -1,0 +1,61 @@
+{
+  "head": {
+    "title": "Beatriz | Desenvolvedora Full Stack"
+  },
+  "banner": {
+    "h1": "Olá, <br>eu sou a <span class=\"green-text\">Beatriz</span>! ",
+    "h2": "Desenvolvedora Full-Stack",
+    "btn1": "Conheça me",
+    "btn2": "Vamos conversar?"
+  },
+  "menu": {
+    "home": "Início",
+    "about": "Sobre",
+    "project": "Projetos",
+    "contact": "Contato"
+  },
+  "about": {
+    "id": "SOBRE MIM",
+    "p1": "Olá. Eu sou a Beatriz Oliveira ─ desenvolvedora full stack, atualmente cursando Desenvolvimento de Software Multiplataforma, com <span>foco em interfaces, integrações, APIs e inteligência artificial</span>.",
+    "p2": "Busco sempre criar soluções escaláveis, responsivas e acessíveis combinando lógica, criatividade e design.",
+    "title-habilities": "HABILIDADES",
+    "title-certificate": "CERTIFICADOS",
+    "title-education": "FORMAÇÃO",
+    "title-experiences": "EXPERIÊNCIA",
+    "course1": "Tecnólogo em Desenvolvimento de Software Multiplataforma",
+    "course2": "Técnico em Desenvolvimento de Sistemas",
+    "course1-progress": "cursando",
+    "course2-progress": "concluído",
+    "experience-title1": "Scrum master e Dev ─ Fatec Jacareí (ABP)",
+    "experience-date1": "Fev 2026 - atual",
+    "experience-desc1-1": "Condução de cerimônias Scrum, com organização e documentação de artefatos e projetos.",
+    "experience-desc1-2": "Colaboração em equipe multidisciplinar, com foco em comunicação eficiente e entregas de qualidade.",
+    "experience-desc1-3": "Desenvolvimento full stack, atuando no front end, backend, design de interfaces e identididade visual e documentação técnica.",
+    "experience-title2": "Desenvolvedora Web Freelancer ─ Somos Todos T.I",
+    "experience-date2": "Set 2025 - Jan 2026",
+    "experience-desc2-1": "Desenvolvimento de landing pages em WordPress, com foco em performance, responsividade e interatividade utilizando JavaScript e CSS.",
+    "experience-desc2-2": "Prototipação de interfaces no Figma, transformando necessidades de negócio em soluções visuais intuitivas e funcionais",
+    "certificate-text1": "Curso voltado para fundamentos de hardware, software, manutenção de computadores e noções básicas de redes e suporte técnico.",
+    "certificate-text2": "Certificação de inglês avaliando compreensão auditiva e leitura para situações do dia a dia e ambiente profissional."
+  },
+  "contact": {
+    "h1": "Entre em <span class=\"green-text\">contato</span>!",
+    "p1": "Gostou do meu trabalho?<br>Estou disponível para oportunidades, freelances e networking.<br>Entre em contato comigo!",
+    "label1": "Nome",
+    "label2": "Telefone",
+    "label3": "Assunto",
+    "label4": "Mensagem",
+    "btn": "Enviar mensagem"
+  },
+  "footer": {
+    "p": "Você chegou ao fim! :)",
+    "copy": "&copy; 2026 Desenvolvido por Beatriz Oliveira ─ Todos os direitos reservados"
+  },
+  "modal": {
+    "title": "Vamos conversar?",
+    "subtitle": "Escolha a melhor forma de entrar em contato."
+  },
+  "not-found": {
+    "h1": "Página <span class=\"green-text\">não</span> encontrada!"
+  }
+}

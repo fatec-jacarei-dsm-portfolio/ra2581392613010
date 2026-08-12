@@ -1,0 +1,61 @@
+{
+  "head": {
+    "title": "Beatriz | Full Stack Developer"
+  },
+  "banner": {
+    "h1": "Hello,<br> I'm  <span class=\"green-text\">Beatriz</span>!",
+    "h2": "Full Stack Developer",
+    "btn1": "Get to know me",
+    "btn2": "Let's Talk"
+  },
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "project": "Projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "id": "ABOUT ME",
+    "p1": "Hello. I'm Beatriz Oliveira ─ full stack developer, majorying in Cross-Platform Software Development, with <span>focus in interfaces, integration, APIs e artificial intelligence</span>.",
+    "p2": "I always look for scalable, responsive and acessible solution combining logic, creativity and design.",
+    "title-habilities": "TECHNICAL SKILLS",
+    "title-certificate": "CERTIFICATES",
+    "title-education": "EDUCATION",
+    "title-experiences": "EXPERIENCES",
+    "course1": "Associate Degree in Cross-platform Software Development",
+    "course2": "Technical Degree in Systems Development",
+    "course1-progress": "in progress",
+    "course2-progress": "complete",
+    "experience-title1": "Scrum master and Dev ─ Fatec Jacareí (ABP)",
+    "experience-date1": "2026 Fev - present",
+    "experience-desc1-1": "Conducting Scrum ceremonies, with organization and documentation of artifacts and projects.",
+    "experience-desc1-2": "Collaboration in multidisciplinary team, with focus on efficient communication and quality deliverables.",
+    "experience-desc1-3": "Full stack development, working on front end, backend, interface design and visual identity and technical documentation.",
+    "experience-title2": "Web Developer Freelancer ─ Somos Todos T.I",
+    "experience-date2": "2025 Set - 2026 Jan",
+    "experience-desc2-1": "Development of landing pages in WordPress, focusing on performance, responsiveness and interactivity using JavaScript and CSS.",
+    "experience-desc2-2": "Interface prototyping in Figma, transforming business needs into intuitive and functional visual solutions.",
+    "certificate-text1": "Course focused on hardware and software fundamentals, computer maintenance, and basic networking and technical support concepts.",
+    "certificate-text2": "English certification assessing listening comprehension and reading skills for everyday and professional situations."
+  },
+  "contact": {
+    "h1": "Get in <span class=\"green-text\">Touch</span>!",
+    "p1": "Did you like my work?<br>I'm avaliable for opportunities, freelances and networking.<br>Feel free to get in touch!",
+    "label1": "Name",
+    "label2": "Phone",
+    "label3": "Subject",
+    "label4": "Message",
+    "btn": "Send message"
+  },
+  "footer": {
+    "p": "Oh! It is the end :)",
+    "copy": "&copy; 2026 Developed by Beatriz Oliveira ─ All Rights Reserved"
+  },
+  "modal": {
+    "title": "Let's Talk?",
+    "subtitle": "Choose the best way to talk to me."
+  },
+  "not-found": {
+    "h1": "Page <span class=\"green-text\">not</span> found!"
+  }
+}

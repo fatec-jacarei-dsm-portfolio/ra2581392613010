@@ -1,11 +1,495 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-theme="dark">
+
 <head>
     <meta charset="UTF-8">
-    <title>Portfólio - BEATRIZ OLIVEIRA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/home.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/variables.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <title data-lang="head.title">Beatriz | Desenvolvedora Full Stack</title>
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+    </script>
 </head>
+
 <body>
-    <h1>Bem vindo ao Portfólio de BEATRIZ OLIVEIRA</h1>
+    <main>
+        <header>
+            <button id="menu-trigger" class="menu-trigger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="menu" id="menu">
+                <div class="menu-spacer">
+                    <button id="language-switcher" class="btn-lang-switch">
+                        <div class="switch-thumb"></div>
+                        <span id="lang-pt" class="spn-lang active">PT</span>
+                        <span id="lang-en" class="spn-lang">EN</span>
+                    </button>
+                    <button type="button" data-theme-toggle class="btn-theme" title="Modo Claro">
+                        <div class="darkmode_icon">
+                            <span class="ray"></span>
+                            <span class="ray"></span>
+                            <span class="ray"></span>
+                            <span class="ray"></span>
+                            <span class="ray"></span>
+                            <span class="ray"></span>
+                            <span class="ray"></span>
+                            <span class="ray"></span>
+                        </div>
+                    </button>
+                </div>
+                <ul class="menu-list">
+                    <li><a href="#banner-section" id="link-1" class="link1" data-lang="menu.home">Início</a></li>
+                    <li><a href="#about-section" id="link-2" class="link2" data-lang="menu.about">Sobre</a></li>
+                    <li><a href="#project-section" id="link-3" class="link3" data-lang="menu.project">Projetos</a></li>
+                    <li><a href="#contact-section" id="link-4" class="link4" data-lang="menu.contact">Contato</a></li>
+                </ul>
+                <div class="menu-icon">
+                    <a href="https://www.linkedin.com/in/a-beatrizoliveira" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/abeatrizoliveira" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <section class="banner" id="banner-section">
+            <div class="banner-text">
+                <h1 data-lang="banner.h1">Olá,<br> eu sou a <span class="green-text">Beatriz</span>! </h1>
+                <h2 data-lang="banner.h2">Desenvolvedora Full-Stack</h2>
+                <div class="banner-skills-label">
+                    <span class="banner-skill-label">
+                        JavaScript
+                    </span>
+                    <span class="banner-skill-label">
+                        TypeScript
+                    </span>
+                    <span class="banner-skill-label">
+                        Python
+                    </span>
+                    <span class="banner-skill-label">
+                        PostgreSQL
+                    </span>
+                    <span class="banner-skill-label">
+                        MySQL
+                    </span>
+                </div>
+                <div class="banner-btns">
+                    <a href="#about-section" class="banner-btn" data-lang="banner.btn1">
+                        Conheça me
+                    </a>
+                    <a class="banner-btn" data-lang="banner.btn2" id="banner-modal-trigger">
+                        Vamos conversar?
+                    </a>
+                </div>
+            </div>
+            <img src="assets/img/cartoon-pic-l-2.png" alt="animated picture" class="banner-img"
+                data-banner-light="assets/img/cartoon-pic-l-2.png" data-banner-dark="assets/img/cartoon-pic-d-2.png">
+        </section>
+        <section class="about-section" id="about-section">
+            <div class="container">
+                <div class="box">
+                    <span class="section-id" data-lang="about.id">SOBRE MIM</span>
+                    <div class="about-me">
+                        <div class="about-me-text">
+                            <p data-lang="about.p1">
+                                Olá. Eu sou a Beatriz Oliveira ─ desenvolvedora full stack, atualmente cursando
+                                Desenvolvimento de Software Multiplataforma, com <span>foco em interfaces, integrações,
+                                    APIs
+                                    e
+                                    inteligência artificial</span>.</p>
+                            <p data-lang="about.p2">
+                                Busco sempre criar soluções escaláveis, responsivas e acessíveis combinando lógica,
+                                criatividade
+                                e design.
+                            </p>
+                        </div>
+                        <div class="about-me-img">
+                            <div class="profile-img-background">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-tech">
+                        <div class="about-tech-skills">
+                            <div class="section-id" data-lang="about.title-habilities">HABILIDADES</div>
+                            <div class="skills">
+                                <div class="skills-status">
+                                    <div class="skill">
+                                        <i class="devicon-typescript-plain"></i>
+                                        <div class="skill-status">
+                                            <span>TypeScript</span>
+                                            <div class="status-bar" aria-label="80%">
+                                                <div class="status-fill" style="width: 80%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <i class="devicon-javascript-plain"></i>
+                                        <div class="skill-status">
+                                            <span>JavaScript</span>
+                                            <div class="status-bar" aria-label="85%">
+                                                <div class="status-fill" style="width: 85%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill">
+                                        <i class="devicon-python-plain"></i>
+                                        <div class="skill-status">
+                                            <span>Python</span>
+                                            <div class="status-bar" aria-label="60%">
+                                                <div class="status-fill" style="width: 60%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <i class="devicon-postgresql-plain"></i>
+                                        <div class="skill-status">
+                                            <span>postgreSQL</span>
+                                            <div class="status-bar" aria-label="50%">
+                                                <div class="status-fill" style="width: 50%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <i class="devicon-mysql-plain"></i>
+                                        <div class="skill-status">
+                                            <span>MySQL</span>
+                                            <div class="status-bar" aria-label="60%">
+                                                <div class="status-fill" style="width: 60%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="skill">
+                                        <i class="devicon-java-plain"></i>
+                                        <div class="skill-status">
+                                            <span>Java</span>
+                                            <div class="status-bar" aria-label="40%">
+                                                <div class="status-fill" style="width: 40%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skills-extra">
+                                <i class="devicon-react-plain" aria-label="React"></i>
+                                <i class="devicon-nodejs-plain" aria-label="Node.js"></i>
+                                <i class="devicon-express-original" aria-label="Express"></i>
+                                <i class="devicon-git-plain" aria-label="Git"></i>
+                                <i class="devicon-figma-plain" aria-label="Figma"></i>
+                                <i class="devicon-linux-plain" aria-label="Linux"></i>
+                            </div>
+                        </div>
+                        <div class="about-tech-education">
+                            <div class="section-id" style="align-self:start;" data-lang="about.title-education">FORMAÇÃO
+                            </div>
+                            <div class="education">
+                                <div class="timeline-container">
+
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">
+                                            2026 - 2028
+                                        </div>
+
+                                        <div class="timeline-marker">
+                                            <div class="timeline-dot"></div>
+                                        </div>
+
+                                        <div class="timeline-content">
+                                            <span class="content-title" data-lang="about.course1">
+                                                Tecnólogo em Desenvolvimento de Software Multiplataforma
+                                            </span>
+                                            <p>FATEC Jacareí - <i data-lang="about.course1-progress">cursando</i></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="timeline-item">
+                                        <div class="timeline-date">
+                                            2023 - 2025
+                                        </div>
+
+                                        <div class="timeline-marker">
+                                            <div class="timeline-dot"></div>
+                                        </div>
+
+                                        <div class="timeline-content">
+                                            <span class="content-title" data-lang="about.course2">
+                                                Técnico em Desenvolvimento de Sistemas
+                                            </span>
+                                            <p>ETEC São José dos Campos - <i
+                                                    data-lang="about.course2-progress">concluído</i></p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="container-extra">
+                    <div class="about-experience">
+                        <span class="section-id" data-lang="about.title-experiences">EXPERIÊNCIA</span>
+                        <div class="experience-items">
+                            <div class="experience-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-kanban" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                                    <path
+                                        d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1z" />
+                                </svg>
+                                <div class="experience-item-texts">
+                                    <div class="experience-title">
+                                        <span data-lang="about.experience-title1"> Scrum master e Dev ─ Fatec Jacareí
+                                            (ABP)</span>
+                                        <span class="date" data-lang="about.experience-date1">Fev 2026 - atual</span>
+                                    </div>
+                                    <ul>
+                                        <li data-lang="about.experience-desc1-1">Condução de cerimônias Scrum, com
+                                            organização e documentação de artefatos e
+                                            projetos.</li>
+                                        <li data-lang="about.experience-desc1-2">Colaboração em equipe multidisciplinar,
+                                            com foco em comunicação eficiente e
+                                            entregas
+                                            de qualidade.</li>
+                                        <li data-lang="about.experience-desc1-3">Desenvolvimento full stack, atuando no
+                                            front end, backend, design de
+                                            interfaces
+                                            e
+                                            identididade visual e documentação técnica.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="experience-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-laptop" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5" />
+                                </svg>
+                                <div class="experience-item-texts">
+                                    <div class="experience-title">
+                                        <span data-lang="about.experience-title2">Desenvolvedora Web Freelancer ─ Somos
+                                            Todos T.I</span>
+                                        <span class="date inactive" data-lang="about.experience-date2"> Set 2025 - Jan
+                                            2026</span>
+                                    </div>
+                                    <ul>
+                                        <li data-lang="about.experience-desc2-1">Desenvolvimento de landing pages em
+                                            WordPress, com foco em performance,
+                                            responsividade e
+                                            interatividade utilizando JavaScript e CSS.</li>
+                                        <li data-lang="about.experience-desc2-2"> Prototipação de interfaces no Figma,
+                                            transformando necessidades de negócio
+                                            em
+                                            soluções visuais intuitivas e funcionais.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-certificates">
+                        <span class="section-id" data-lang="about.title-certificate">CERTIFICADOS</span>
+                        <div class="certificate-item">
+                            <div class="certificate-item-texts">
+                                <span class="certificate-title"> - <a> IT Essentials | Cisco (2026)</a> </span>
+                                <p class="certificate-text" data-lang="about.certificate-text1">Curso voltado para
+                                    fundamentos de hardware, software,
+                                    manutenção de
+                                    computadores e noções básicas de redes e suporte técnico. </p>
+                            </div>
+                        </div>
+                        <div class="certificate-item">
+                            <div class="certificate-item-texts">
+                                <span class="certificate-title"> - <a> Reading and Listening | TOEIC Brasil
+                                        (2025)</a> </span>
+                                <p class="certificate-text" data-lang="about.certificate-text2">Certificação de inglês
+                                    avaliando compreensão auditiva e
+                                    leitura para
+                                    situações do dia a dia e ambiente profissional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project-section" id="project-section">
+            <span class="section-id">PROJETOS</span>
+            <div class="project-container">
+                <div class="project-section-start">
+                    <h2>Projetos Recentes</h2>
+                    <div class="project-section-btns">
+                        <a href="https://github.com/abeatrizoliveira?tab=repositories" target="_blank"> Acessar o GitHub
+                        </a>
+                        <a href="#"> Ver todos projetos
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+        </section>
+        <section class="contact-section" id="contact-section">
+            <div class="info-contact">
+                <h1 data-lang="contact.h1">Entre em contato</h1>
+                <p data-lang="contact.p1">
+                    Gostou do meu trabalho?
+                    <br>
+                    Estou disponível para oportunidades, freelances e networking.
+                    <br>
+                    Entre em contato comigo!
+                </p>
+                <div class="icons-texts">
+                    <div class="icon-text">
+                        <a href="https://linkedin.com/in/a-beatrizoliveira" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                            </svg>
+                            <span id="linkedin-contact">linkedin.com/in/a-beatrizoliveira</span>
+                        </a>
+                        <a id="copy-linkedin">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-copy" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="icon-text">
+                        <a href="https://github.com/abeatrizoliveira" target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-github" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                            </svg>
+                            <span id="github-contact">github.com/abeatrizoliveira</span>
+                        </a>
+                        <a id="copy-github">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-copy" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button class="scroll-to-top" id="scroll-to-top" title="Ir para o topo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+            </svg>
+        </button>
+        <div class="banner-modal" id="banner-modal">
+            <div class="modal-content">
+                <span class="modal-title" data-lang="modal.title">Vamos conversar?</span>
+                <p data-lang="modal.subtitle">Escolha a melhor forma de entrar em contato.</p>
+                <span class="close-modal-btn" id="close-modal-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                    </svg>
+                </span>
+                <div class="modal-items">
+                    <a class="modal-item" href="https://linkedin.com/in/a-beatrizoliveira" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a class="modal-item" href="https://github.com/abeatrizoliveira" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-message">
+            <p data-lang="footer.p">Você chegou ao fim! :)</p>
+        </div>
+        <div class="hr"></div>
+        <div class="footer-content">
+            <div class="footer-navigation">
+                <a href="#banner-section" id="link-1" class="link1" data-lang="menu.home">Início</a>
+                <a href="#about-section" id="link-2" class="link1" data-lang="menu.about">Sobre</a>
+                <a href="#project-section" id="link-3" class="link2" data-lang="menu.project">Projetos</a>
+                <a href="#contact-section" id="link-4" class="link3" data-lang="menu.contact">Contato</a>
+            </div>
+            <div class="social-btns">
+                <a href="https://www.linkedin.com/in/a-beatrizoliveira" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/abeatrizoliveira" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-github" viewBox="0 0 16 16">
+                        <path
+                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <br>
+        <div class="footer-end" data-lang="footer.copy">
+            &copy; 2026 Desenvolvido por Beatriz Oliveira ─ Todos os direitos reservados
+        </div>
+    </footer>
+
+    <!-- JS do gsap (animações com scroll) -->
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+    <!-- JS para tradução -->
+    <script src="assets/js/translate.js"></script>
+
+    <!-- JS para alterar tema -->
+    <script src="assets/js/theme.js"></script>
+
+    <!-- JS customizado -->
+    <script src="assets/js/index.js"></script>
 </body>
+
 </html>
