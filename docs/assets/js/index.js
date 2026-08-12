@@ -71,23 +71,21 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-// Animação de aparecer
-gsap.registerPlugin(ScrollTrigger);
+// Animação de surgimento de conteúdo na tela
 
-gsap.utils.toArray(".box").forEach((box) => {
-  gsap.fromTo(
-    box,
-    { x: "100%" },
-    {
-      x: 0,
-      scrollTrigger: {
-        trigger: box,
-        start: "top 80%",
-        end: "top 20%",
-        scrub: 1,
-      },
-    },
-  );
+const observerBox = new IntersectionObserver(
+  (entriesBox) => {
+    entriesBox.forEach((entryBox) => {
+      if (entryBox.isIntersecting) {
+        entryBox.target.classList.add("show");
+        observerBox.unobserve(entryBox.target);
+      }
+    });
+  },
+);
+
+document.querySelectorAll(".box").forEach((box) => {
+  observerBox.observe(box);
 });
 
 // função para o aria-label seguir o mouse

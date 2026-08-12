@@ -212,6 +212,17 @@
 
 /* Ajuste no Container Principal */
 
+.box {
+  opacity: 0;
+  transform: translateX(90%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.box.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 .about-section {
     height: 100%;
 }
@@ -645,7 +656,62 @@
 
 .project-section-start a:hover {
     transform: translateY(-0.25rem);
+     background-color: var(--txt-color);
 }
+
+.project-section-projects {
+    display: flex;
+    gap: 30px;
+    margin-top:30px;    
+}
+
+.project-card .section-id{
+    text-align: center;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 2px solid var(--txt-color);
+    padding: 15px;
+    border-radius: 20px;
+    gap: 10px;
+}
+
+.project-card a{
+    color: var(--txt-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.project-card ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.banner-skill-label.project {
+    padding: 2.5px 5px;
+    animation: none;
+}
+
+.project-card .skills-section{
+    display: flex;
+    gap: 15px;
+}
+
+.project-card-img{
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    margin-top: 15px;
+}
+
+
 
 /* Contato */
 .contact-section {
