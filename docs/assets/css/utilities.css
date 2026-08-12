@@ -1,0 +1,37 @@
+/* Texto verde marcado */
+[data-theme="light"] .green-text {
+    color: var(--drk-green);
+}
+
+[data-theme="dark"] .green-text {
+    color: var(--lgt-green);
+}
+
+.section-id {
+    color: var(--txt-color);
+    letter-spacing: 15%;
+}
+
+.banner-skill-label {
+    padding: 5px 10px;
+    background-color: var(--green-transparent);
+    outline-offset: -2px;
+    border-radius: 15px;
+    color: var(--txt-color);
+    box-shadow: 0 0 3px rgba(154, 172, 120, 0.5);
+    transition: 0.2s ease;
+    transition: var(--transition);
+    animation: up-down 1.5s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+[data-theme="light"] .banner-skill-label {
+    border: 3px solid var(--lgt-green);
+    outline: 1px solid var(--drk-green);
+
+}
+
+[data-theme="dark"] .banner-skill-label {
+    border: 3px solid var(--drk-green);
+    outline: 1px solid var(--lgt-green);
+}

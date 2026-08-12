@@ -1,0 +1,54 @@
+/* Fonte padrão do site */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    height: 100%;
+    background-color: var(--bg-color);
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+section {
+    height: 100vh;
+    padding: 30px;
+}
+
+h1 {
+    font-size: var(--title-size);
+    color: var(--txt-color);
+}
+
+h2 {
+    font-size: var(--subtitle-size);
+    color: var(--txt-color);
+}
+
+p {
+    font-size: var(--txt-size);
+}
+
+
+/* Responsividade dos elementos globais */
+@media screen and (max-width: 768px) {
+    section{
+        height: 100%;
+        padding: 15px;
+    }
+}
