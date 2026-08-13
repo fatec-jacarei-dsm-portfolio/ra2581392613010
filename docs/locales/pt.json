@@ -38,6 +38,13 @@
     "certificate-text1": "Curso voltado para fundamentos de hardware, software, manutenção de computadores e noções básicas de redes e suporte técnico.",
     "certificate-text2": "Certificação de inglês avaliando compreensão auditiva e leitura para situações do dia a dia e ambiente profissional."
   },
+    "project": {
+    "id": "PROJETOS",
+    "social-btn": "Acesse o GitHub",
+    "id-card1": "Acadêmicos",
+    "id-card2":"Pessoais",
+    "id-card3": "Profissionais"
+  },
   "contact": {
     "h1": "Entre em <span class=\"green-text\">contato</span>!",
     "p1": "Gostou do meu trabalho?<br>Estou disponível para oportunidades, freelances e networking.<br>Entre em contato comigo!",

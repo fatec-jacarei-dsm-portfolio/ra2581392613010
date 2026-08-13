@@ -150,20 +150,29 @@ copyGithub.addEventListener("click", function () {
   });
 });
 
-
 // Animação indicando que tem scroll.
+const swipeGif = document.querySelector(".swipe-animation");
 
-/*
-const observerBox = new IntersectionObserver((entriesBox) => {
-  entriesBox.forEach((entryBox) => {
-    if (entryBox.isIntersecting) {
-      entryBox.target.classList.add("show");
-      observerBox.unobserve(entryBox.target);
-    }
-  });
-});
+if (swipeGif) {
+  const observerCard = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
 
-document.querySelectorAll(".box").forEach((box) => {
-  observerBox.observe(box);
-});
-*/
+        swipeGif.classList.add("show");
+
+        clearTimeout(swipeGif.hideTimeout);
+        swipeGif.hideTimeout = setTimeout(() => {
+          swipeGif.classList.remove("show");
+        }, 3500);
+
+        observerCard.unobserve(swipeGif);
+      });
+    },
+    {
+      threshold: 0.2,
+    },
+  );
+
+  observerCard.observe(swipeGif);
+}

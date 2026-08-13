@@ -1,5 +1,6 @@
 const themeBtn = document.querySelector("[data-theme-toggle]");
 var bannerImg = document.querySelector(".banner-img");
+var swipeAnimation = document.querySelector(".swipe-animation");
 const html = document.querySelector("html");
 const hCaptcha = document.getElementById("h-captcha");
 
@@ -11,8 +12,10 @@ ALTERA SPRITE
 function updateBanner(theme) {
   if (theme === "dark") {
     bannerImg.setAttribute("src", `${bannerImg.dataset.bannerDark}`);
+    swipeAnimation.setAttribute("src", `${swipeAnimation.dataset.bannerDark}`);
   } else {
     bannerImg.setAttribute("src", `${bannerImg.dataset.bannerLight}`);
+    swipeAnimation.setAttribute("src", `${swipeAnimation.dataset.bannerLight}`);
   }
 }
 

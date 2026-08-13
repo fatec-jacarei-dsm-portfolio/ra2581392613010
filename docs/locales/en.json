@@ -38,6 +38,13 @@
     "certificate-text1": "Course focused on hardware and software fundamentals, computer maintenance, and basic networking and technical support concepts.",
     "certificate-text2": "English certification assessing listening comprehension and reading skills for everyday and professional situations."
   },
+  "project": {
+    "id": "PROJECTS",
+    "social-btn": "Access GitHub",
+    "id-card1": "Academic",
+    "id-card2":"Personal",
+    "id-card3": "Profissional"
+  },
   "contact": {
     "h1": "Get in <span class=\"green-text\">Touch</span>!",
     "p1": "Did you like my work?<br>I'm avaliable for opportunities, freelances and networking.<br>Feel free to get in touch!",
