@@ -213,14 +213,14 @@
 /* Ajuste no Container Principal */
 
 .box {
-  opacity: 0;
-  transform: translateX(90%);
-  transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateX(90%);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .box.show {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .about-section {
@@ -276,7 +276,7 @@
     height: 275px;
     border-radius: 50%;
     border: 2px solid var(--txt-color);
-    background-image: url("../img/profile-pic.png");
+    background-image: url("../img/profile-img.png");
     background-repeat: no-repeat;
     background-size: cover;
     justify-self: center;
@@ -308,6 +308,7 @@
 .about-tech-education {
     flex: 1;
     height: 100%;
+    align-self: flex-start;
 }
 
 .about-tech-skills {
@@ -315,9 +316,6 @@
     height: 100%;
 }
 
-.about-tech-education {
-    align-self: flex-start;
-}
 
 
 .skills-extra {
@@ -656,37 +654,47 @@
 
 .project-section-start a:hover {
     transform: translateY(-0.25rem);
-     background-color: var(--txt-color);
+    background-color: var(--txt-color);
 }
 
 .project-section-projects {
     display: flex;
     gap: 30px;
-    margin-top:30px;    
+    margin-top: 30px;
+    transform: all 0.5s;
 }
 
-.project-card .section-id{
+.project-card .section-id {
     text-align: center;
 }
 
-.project-card{
+.project-card {
     display: flex;
     flex-direction: column;
     width: 100%;
     border: 2px solid var(--txt-color);
+    color: var(--txt-color);
     padding: 15px;
     border-radius: 20px;
     gap: 10px;
 }
 
-.project-card a{
+.project-card a {
     color: var(--txt-color);
     text-decoration: none;
     font-weight: 600;
     font-size: 1.5rem;
+    gap: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.project-card ul{
+.project-card a svg{
+    width:  24px;
+    height: 24px;
+}
+
+.project-card ul {
     list-style: none;
     display: flex;
     gap: 10px;
@@ -698,12 +706,12 @@
     animation: none;
 }
 
-.project-card .skills-section{
+.project-card .skills-section {
     display: flex;
     gap: 15px;
 }
 
-.project-card-img{
+.project-card-img {
     width: 100%;
     border-radius: 10px;
     aspect-ratio: 16/9;
@@ -964,6 +972,7 @@
         padding: 30px;
     }
 
+
     .about-text .name {
         font-size: 2.125rem;
     }
@@ -976,6 +985,10 @@
         flex-wrap: wrap;
         flex-direction: column;
         gap: 30px;
+    }
+
+    .about-tech {
+        flex-direction: column;
     }
 
     .about-me-text p {
@@ -1061,6 +1074,23 @@
         align-items: flex-start;
         flex-direction: column;
         gap: 15px;
+    }
+
+    .project-section-projects {
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .project-section-projects::-webkit-scrollbar {
+        display: none;
+    }
+
+    .project-card {
+        flex: 0 0 auto 
     }
 
     .project-section-items {

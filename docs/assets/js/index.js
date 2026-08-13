@@ -73,16 +73,14 @@ sections.forEach((section) => {
 
 // Animação de surgimento de conteúdo na tela
 
-const observerBox = new IntersectionObserver(
-  (entriesBox) => {
-    entriesBox.forEach((entryBox) => {
-      if (entryBox.isIntersecting) {
-        entryBox.target.classList.add("show");
-        observerBox.unobserve(entryBox.target);
-      }
-    });
-  },
-);
+const observerBox = new IntersectionObserver((entriesBox) => {
+  entriesBox.forEach((entryBox) => {
+    if (entryBox.isIntersecting) {
+      entryBox.target.classList.add("show");
+      observerBox.unobserve(entryBox.target);
+    }
+  });
+});
 
 document.querySelectorAll(".box").forEach((box) => {
   observerBox.observe(box);
@@ -151,3 +149,21 @@ copyGithub.addEventListener("click", function () {
     }, 1500);
   });
 });
+
+
+// Animação indicando que tem scroll.
+
+/*
+const observerBox = new IntersectionObserver((entriesBox) => {
+  entriesBox.forEach((entryBox) => {
+    if (entryBox.isIntersecting) {
+      entryBox.target.classList.add("show");
+      observerBox.unobserve(entryBox.target);
+    }
+  });
+});
+
+document.querySelectorAll(".box").forEach((box) => {
+  observerBox.observe(box);
+});
+*/
