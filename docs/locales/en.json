@@ -38,6 +38,22 @@
     "certificate-text1": "Course focused on hardware and software fundamentals, computer maintenance, and basic networking and technical support concepts.",
     "certificate-text2": "English certification assessing listening comprehension and reading skills for everyday and professional situations."
   },
+  "project": {
+    "id": "PROJECTS",
+    "social-btn": "Access GitHub",
+    "id-card1": "Academic",
+    "id-card2": "Personal",
+    "id-card3": "Profissional",
+    "id-card1-p1": "Web system designed to facilitate learning agile methodologies. It offers activities to test and validate your knowledge.",
+    "id-card1-p2": "- Served as Scrum Master and developed integrations between the frontend and REST APIs in JavaScript",
+    "id-card1-p3": "- Refactored the backend to improve code readability, maintainability, and scalability.",
+    "id-card2-p1": "Productivity app that combines task management with the Pomodoro technique. It helps you organize your day and stay focused on what really matters.",
+    "id-card2-p2": "- Defined the requirements and business rules, dividing them into three sprints",
+    "id-card2-p3": "- Developed the frontend with a focus on responsiveness and strong UX and UI",
+    "id-card3-p1": "Website that teaches the main technological trends in practice, develops innovative skills, and helps you achieve real results in your career.",
+    "id-card3-p2": "- Prototyped solutions in Figma with intuitive and functional interfaces.",
+    "id-card3-p3": "- Collaborated with the founder by applying assertive communication and understanding the project's technical impact."
+  },
   "contact": {
     "h1": "Get in <span class=\"green-text\">Touch</span>!",
     "p1": "Did you like my work?<br>I'm avaliable for opportunities, freelances and networking.<br>Feel free to get in touch!",

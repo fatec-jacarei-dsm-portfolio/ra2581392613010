@@ -71,23 +71,19 @@ sections.forEach((section) => {
   observer.observe(section);
 });
 
-// Animação de aparecer
-gsap.registerPlugin(ScrollTrigger);
+// Animação de surgimento de conteúdo na tela
 
-gsap.utils.toArray(".box").forEach((box) => {
-  gsap.fromTo(
-    box,
-    { x: "100%" },
-    {
-      x: 0,
-      scrollTrigger: {
-        trigger: box,
-        start: "top 80%",
-        end: "top 20%",
-        scrub: 1,
-      },
-    },
-  );
+const observerBox = new IntersectionObserver((entriesBox) => {
+  entriesBox.forEach((entryBox) => {
+    if (entryBox.isIntersecting) {
+      entryBox.target.classList.add("show");
+      observerBox.unobserve(entryBox.target);
+    }
+  });
+});
+
+document.querySelectorAll(".box").forEach((box) => {
+  observerBox.observe(box);
 });
 
 // função para o aria-label seguir o mouse
@@ -107,18 +103,30 @@ skills.forEach((skill) => {
 
 // Função para o modal ativar e desativar
 const bannerModal = document.getElementById("banner-modal");
+const modalContent = document.querySelector(".modal-content");
 const bannerModalTrigger = document.getElementById("banner-modal-trigger");
 const closeModalBtn = document.getElementById("close-modal-btn");
 
 bannerModalTrigger.addEventListener("click", function () {
   if (!bannerModal.classList.contains("active")) {
     bannerModal.classList.add("active");
+    closeModal();
   }
 });
 
 closeModalBtn.addEventListener("click", function () {
   bannerModal.classList.remove("active");
 });
+
+function closeModal() {
+  if (bannerModal.classList.contains("active")) {
+    document.addEventListener("mousedown", function (evento) {
+      if (!modalContent.contains(evento.target)) {
+        bannerModal.classList.remove("active");
+      }
+    });
+  }
+}
 
 const copyLinkedin = document.getElementById("copy-linkedin");
 const linkedin = document.getElementById("linkedin-contact");
@@ -153,3 +161,30 @@ copyGithub.addEventListener("click", function () {
     }, 1500);
   });
 });
+
+// Animação indicando que tem scroll.
+const swipeGif = document.querySelector(".swipe-animation");
+
+if (swipeGif) {
+  const observerCard = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        swipeGif.classList.add("show");
+
+        clearTimeout(swipeGif.hideTimeout);
+        swipeGif.hideTimeout = setTimeout(() => {
+          swipeGif.classList.remove("show");
+        }, 3500);
+
+        observerCard.unobserve(swipeGif);
+      });
+    },
+    {
+      threshold: 0.2,
+    },
+  );
+
+  observerCard.observe(swipeGif);
+}

@@ -52,3 +52,13 @@ p {
         padding: 15px;
     }
 }
+
+[data-theme="light"] ::selection{
+    background-color: var(--lgt-green);
+    color: var(--txt-color);
+}
+
+[data-theme="dark"] ::selection{
+    background-color: var(--drk-green);
+    color: var(--txt-color);
+}
