@@ -43,7 +43,16 @@
     "social-btn": "Acesse o GitHub",
     "id-card1": "Acadêmicos",
     "id-card2":"Pessoais",
-    "id-card3": "Profissionais"
+    "id-card3": "Profissionais",
+    "id-card1-p1": "Sistema web com a missão de facilitar o aprendizado de metodologias ágeis. Oferece atividades para testar e validar seu conhecimento.",
+    "id-card1-p2":"- Atuei como Scrum Master e desenvolvi integrações entre frontend e APIs REST em JavaScript",
+    "id-card1-p3":"- Refatorei o backend para melhorar legibilidade, manutenção e escalabilidade do código.",
+    "id-card2-p1":"Aplicativo de produtividade que une gerenciamento de tarefas e a técnica pomodoro. Ele te ajuda a organizar o seudia e manter o foco no que realmente importa.",
+    "id-card2-p2":"- Defini os requisitos e as regras de negócio dividindo-os em três sprints",
+    "id-card2-p3":"- Desenvolvi o frontend focando em responsavidade e um bom UX e UI",
+    "id-card3-p1":"Site que ensinsa na prática as principais tendências tecnológicas, desenvolve habilidades inovadoras e conquista resultados reais para sua carreira.",
+    "id-card3-p2":"- Prototipei soluções no Figma com interfaces intuitivas e funcionais.",
+    "id-card3-p3":"- Colaborei com o fundador aplicando comunicação assertiva e entendendo o impacto técnico do projeto."
   },
   "contact": {
     "h1": "Entre em <span class=\"green-text\">contato</span>!",

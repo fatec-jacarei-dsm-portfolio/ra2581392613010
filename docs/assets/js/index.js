@@ -103,18 +103,30 @@ skills.forEach((skill) => {
 
 // Função para o modal ativar e desativar
 const bannerModal = document.getElementById("banner-modal");
+const modalContent = document.querySelector(".modal-content");
 const bannerModalTrigger = document.getElementById("banner-modal-trigger");
 const closeModalBtn = document.getElementById("close-modal-btn");
 
 bannerModalTrigger.addEventListener("click", function () {
   if (!bannerModal.classList.contains("active")) {
     bannerModal.classList.add("active");
+    closeModal();
   }
 });
 
 closeModalBtn.addEventListener("click", function () {
   bannerModal.classList.remove("active");
 });
+
+function closeModal() {
+  if (bannerModal.classList.contains("active")) {
+    document.addEventListener("mousedown", function (evento) {
+      if (!modalContent.contains(evento.target)) {
+        bannerModal.classList.remove("active");
+      }
+    });
+  }
+}
 
 const copyLinkedin = document.getElementById("copy-linkedin");
 const linkedin = document.getElementById("linkedin-contact");

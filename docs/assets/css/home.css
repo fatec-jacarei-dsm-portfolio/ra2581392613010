@@ -481,6 +481,10 @@
     background-color: var(--lgt-green);
 }
 
+.timeline-dot.inactive{
+    opacity: 0.50;
+}
+
 /* Conteúdo */
 .timeline-content {
     display: flex;
@@ -723,6 +727,36 @@
     margin-top: 15px;
 }
 
+
+.project-card-img {
+    width: 100%;
+    border-radius: 10px;
+    aspect-ratio: 16/9;
+    margin-top: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s;
+}
+
+.project-card-img.smt {
+    background-image: url("../img/smt.png");
+
+}
+
+.project-card-img.smt:hover {
+    background-image: url("../img/smt.gif");
+}
+
+
+.project-card-img.sm {
+    background-image: url("../img/sm.jpg");
+
+}
+
+.project-card-img.sm:hover {
+    background-image: url("../img/sm.gif");
+}
 
 
 /* Contato */

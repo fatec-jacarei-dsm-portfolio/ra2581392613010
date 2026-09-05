@@ -1,6 +1,7 @@
 const themeBtn = document.querySelector("[data-theme-toggle]");
 var bannerImg = document.querySelector(".banner-img");
 var swipeAnimation = document.querySelector(".swipe-animation");
+var cardImg = document.querySelectorAll(".project-card-img");
 const html = document.querySelector("html");
 const hCaptcha = document.getElementById("h-captcha");
 
@@ -9,13 +10,21 @@ const hCaptcha = document.getElementById("h-captcha");
 ALTERA SPRITE
 -=-=-=-=-=-=-
 */
+
 function updateBanner(theme) {
+
   if (theme === "dark") {
     bannerImg.setAttribute("src", `${bannerImg.dataset.bannerDark}`);
     swipeAnimation.setAttribute("src", `${swipeAnimation.dataset.bannerDark}`);
-  } else {
+    cardImg.forEach((img) => {
+      img.setAttribute("src", `${img.dataset.bannerDark}`);
+    });
+  }else{
     bannerImg.setAttribute("src", `${bannerImg.dataset.bannerLight}`);
     swipeAnimation.setAttribute("src", `${swipeAnimation.dataset.bannerLight}`);
+    cardImg.forEach((img) => {
+      img.setAttribute("src", `${img.dataset.bannerLight}`);
+    });
   }
 }
 
@@ -27,6 +36,7 @@ ALTERA AIMAÇÃO
 
 // Função para animação
 function updateAnimation(theme) {
+
   let animationInterval;
 
   const darkFrames = [
@@ -45,7 +55,7 @@ function updateAnimation(theme) {
 
   bannerImg.addEventListener("mouseenter", (event) => {
     const frames = theme === "dark" ? darkFrames : lightFrames;
-
+    
     let currentFrame = 0;
 
     clearInterval(animationInterval);
@@ -88,7 +98,7 @@ PEGA TEMA INICIAL
 -=-=-=-=-=-=-=-=-
 */
 
-function getInitialTheme(theme) {
+function getInitialTheme() {
   const savedTheme = localStorage.getItem("theme");
 
   if (savedTheme) {

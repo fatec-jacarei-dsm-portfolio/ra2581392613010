@@ -16,7 +16,7 @@
 
     <title data-lang="head.title">Beatriz | Desenvolvedora Full Stack</title>
     <script>
-        const savedTheme = localStorage.getItem("theme");
+        const savedTheme = localStorage.getItem("theme");   
         if (savedTheme) {
             document.documentElement.setAttribute("data-theme", savedTheme);
         }
@@ -233,7 +233,7 @@
                                         </div>
 
                                         <div class="timeline-marker">
-                                            <div class="timeline-dot"></div>
+                                            <div class="timeline-dot inactive"></div>
                                         </div>
 
                                         <div class="timeline-content">
@@ -345,7 +345,8 @@
                 <div class="project-section-start">
                     <span class="section-id" data-lang="project.id">PROJETOS</span>
                     <div class="project-section-btns">
-                        <a href="https://github.com/abeatrizoliveira?tab=repositories" target="_blank" data-lang="project.social-btn"> Acessar o GitHub
+                        <a href="https://github.com/abeatrizoliveira?tab=repositories" target="_blank"
+                            data-lang="project.social-btn"> Acessar o GitHub
                         </a>
                     </div>
                 </div>
@@ -354,7 +355,7 @@
                         data-banner-light="assets/img/swipe_d.gif" data-banner-dark="assets/img/swipe_l.gif">
                     <div class="project-card">
                         <span class="section-id" data-lang="project.id-card1">Acadêmico</span>
-                        <img src="https://i.redd.it/kgb939xcaaaa1.gif" class="project-card-img">
+                        <div class="project-card-img sm"></div>
                         <a href="https://github.com/TechFellasAbp/sprint-master" target="_blank">Sprint Master <svg
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
@@ -372,19 +373,23 @@
                                 PostgreSQL
                             </span>
                         </div>
-                        <p>Sistema web com a missão de facilitar o aprendizado de metodologias ágeis. Oferece atividades
+                        <p data-lang="project.id-card1-p1">Sistema web com a missão de facilitar o aprendizado de
+                            metodologias ágeis. Oferece atividades
                             para testar e validar seu conhecimento.</p>
                         <ul>
-                            <li>- Atuei como Scrum Master e desenvolvi integrações entre frontend e APIs REST em
+                            <li data-lan="project.id-card1-p2">- Atuei como Scrum Master e desenvolvi integrações entre
+                                frontend e APIs REST em
                                 JavaScript.</li>
-                            <li>- Refatorei o backend para melhorar legibilidade, manutenção e escalabilidade do código.
+                            <li data-lang="project.id-card1-p3">- Refatorei o backend para melhorar legibilidade,
+                                manutenção e escalabilidade do código.
                             </li>
                         </ul>
                         <span class="section-id">1DSM – 1º Sem. 2026</span>
                     </div>
                     <div class="project-card">
                         <span class="section-id" data-lang="project.id-card2">Pessoal</span>
-                        <img src="https://i.redd.it/kgb939xcaaaa1.gif" class="project-card-img">
+                        <img src="assets/img/db_l.png" alt="animated picture" class="project-card-img"
+                            data-banner-light="assets/img/db_l.png" data-banner-dark="assets/img/db_d.png">
                         <a href="https://github.com/abeatrizoliveira/daily-app" target="_blank">Daily Bee <svg
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
@@ -402,12 +407,15 @@
                                 Supabase
                             </span>
                         </div>
-                        <p>Aplicativo de produtividade que une gerenciamento de tarefas e a técnica
+                        <p data-lang="project.id-card2-p1">Aplicativo de produtividade que une gerenciamento de tarefas
+                            e a técnica
                             pomodoro. Ele te ajuda a organizar o seu
                             dia e manter o foco no que realmente importa. </p>
                         <ul>
-                            <li>- Defini os requisitos e as regras de negócio dividindo-os em três sprints</li>
-                            <li>- Desenvolvi o frontend focando em responsavidade e um bom UX e UI</li>
+                            <li data-lang="project.id-card2-p2">- Defini os requisitos e as regras de negócio
+                                dividindo-os em três sprints</li>
+                            <li data-lang="project.id-card2-p3">- Desenvolvi o frontend focando em responsavidade e um
+                                bom UX e UI</li>
 
                         </ul>
                         <span class="section-id">06/2026 - 08/2026</span>
@@ -415,7 +423,7 @@
 
                     <div class="project-card">
                         <span class="section-id" data-lang="project.id-card3">Profissional</span>
-                        <img src="https://i.redd.it/kgb939xcaaaa1.gif" class="project-card-img">
+                        <div class="project-card-img smt"></div>
                         <a href="https://somostodosti.com.br/" target="_blank">Somos Todos T.I <svg
                                 xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-arrow-right-short" viewBox="0 0 16 16">
@@ -430,11 +438,14 @@
                                 JavaScript
                             </span>
                         </div>
-                        <p>Site que ensinsa na prática as principais tendências tecnológicas, desenvolve habilidades
+                        <p data-lang="project.id-card3-p1">Site que ensinsa na prática as principais tendências
+                            tecnológicas, desenvolve habilidades
                             inovadoras e conquista resultados reais para sua carreira.</p>
                         <ul>
-                            <li>- Prototipei soluções no Figma com interfaces intuitivas e funcionais.</li>
-                            <li>- Colaborei com o fundador aplicando comunicação assertiva e entendendo o impacto
+                            <li data-lang="project.id-card3-p1">- Prototipei soluções no Figma com interfaces intuitivas
+                                e funcionais.</li>
+                            <li data-lang="project.id-card3-p1">- Colaborei com o fundador aplicando comunicação
+                                assertiva e entendendo o impacto
                                 técnico do projeto.</li>
                         </ul>
                         <span class="section-id">09/2025 - 01/2026</span>
