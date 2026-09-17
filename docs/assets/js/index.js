@@ -7,6 +7,25 @@ const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".menu-list a");
 const imageBanner = document.querySelector(".banner-img");
 
+// Barra de progresso no topo do site.
+window.addEventListener('scroll', () =>{
+ 
+  const scroll = window.scrollY;
+  const documentHeight = document.documentElement.scrollHeight;
+  console.log(documentHeight)
+
+  const screenHeight = window.innerHeight;
+
+  const scrollHeight = documentHeight - screenHeight;
+
+  const percentualScroll = (scroll/scrollHeight) * 100;
+
+  const progressBar = document.getElementById("progress-bar");
+
+  progressBar.style.width = `${percentualScroll}%`;
+})
+
+
 // Evento para o botão de "ir ao topo" aparecer e o menu ficar suspenso.
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
@@ -85,6 +104,22 @@ const observerBox = new IntersectionObserver((entriesBox) => {
 document.querySelectorAll(".box").forEach((box) => {
   observerBox.observe(box);
 });
+
+// Animação de surgimento de conteúdo na tela
+
+const observerSkills = new IntersectionObserver((entriesSkills) => {
+  entriesSkills.forEach((entryskills) => {
+    if (entryskills.isIntersecting) {
+      entryskills.target.classList.add("show");
+      observerSkills.unobserve(entryskills.target);
+    }
+  });
+});
+
+document.querySelectorAll(".skills-extra").forEach((skill) => {
+  observerSkills.observe(skill);
+});
+
 
 // função para o aria-label seguir o mouse
 const skills = document.querySelectorAll(".skill");

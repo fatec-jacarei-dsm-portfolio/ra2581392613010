@@ -1,3 +1,15 @@
+/* BARRA DE PROGRESSO */
+.progress-bar{
+    z-index: 99999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    border-radius: 2px;
+    transition: var(--transition);
+    background-color: var(--txt-color);
+}
+
 /* Botão de scroll até o topo */
 
 .scroll-to-top {
@@ -53,10 +65,7 @@
     display: flex;
     gap: 5px;
     margin-top: 30px;
-}
-
-.banner-skill-label {
-    cursor: pointer;
+    cursor: default;
 }
 
 .banner-skill-label:nth-child(1) {
@@ -412,9 +421,14 @@
 }
 
 .status-fill {
+    width: 0%;
     height: 100%;
     background-color: var(--txt-color);
     border-radius: 4px;
+    transition: var(--transition);
+}
+.about-tech-skills:has(.skills-extra.show) .status-fill {
+    width: var(--largura);
 }
 
 .timeline-container {
