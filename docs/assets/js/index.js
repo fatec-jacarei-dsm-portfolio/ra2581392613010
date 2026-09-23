@@ -8,23 +8,21 @@ const navLinks = document.querySelectorAll(".menu-list a");
 const imageBanner = document.querySelector(".banner-img");
 
 // Barra de progresso no topo do site.
-window.addEventListener('scroll', () =>{
- 
+window.addEventListener("scroll", () => {
   const scroll = window.scrollY;
   const documentHeight = document.documentElement.scrollHeight;
-  console.log(documentHeight)
+  console.log(documentHeight);
 
   const screenHeight = window.innerHeight;
 
   const scrollHeight = documentHeight - screenHeight;
 
-  const percentualScroll = (scroll/scrollHeight) * 100;
+  const percentualScroll = (scroll / scrollHeight) * 100;
 
   const progressBar = document.getElementById("progress-bar");
 
   progressBar.style.width = `${percentualScroll}%`;
-})
-
+});
 
 // Evento para o botão de "ir ao topo" aparecer e o menu ficar suspenso.
 window.addEventListener("scroll", () => {
@@ -76,6 +74,9 @@ const observer = new IntersectionObserver(
 
           if (link.getAttribute("href") === `#${id}`) {
             link.classList.add("green-text");
+
+            menu.classList.remove("active");
+            menuTrigger.classList.remove("clicked");
           }
         });
       }
@@ -119,7 +120,6 @@ const observerSkills = new IntersectionObserver((entriesSkills) => {
 document.querySelectorAll(".skills-extra").forEach((skill) => {
   observerSkills.observe(skill);
 });
-
 
 // função para o aria-label seguir o mouse
 const skills = document.querySelectorAll(".skill");

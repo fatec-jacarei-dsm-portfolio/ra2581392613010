@@ -22,6 +22,11 @@
     font-weight:  900;
 }
 
+.not-found h1{
+    font-size: 3rem;
+    text-align: center;
+}
+
 .not-found .btn-back {
     color: var(--txt-color);
     transition: var(--transition);
@@ -35,6 +40,8 @@
     font-size: small;
     position: absolute;
     bottom: 20px;
+    padding: 30px;
+    text-align: center;
 }
 
 a{
@@ -52,6 +59,9 @@ a:hover {
 }
 
 @media screen and (max-width: 768px) {
+    body, html{
+        height: 100%;
+    }
     .not-found {
         height: 100%;
     }
