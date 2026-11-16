@@ -1,5 +1,5 @@
 /* BARRA DE PROGRESSO */
-.progress-bar{
+.progress-bar {
     z-index: 99999;
     position: fixed;
     top: 0;
@@ -333,15 +333,20 @@
     margin-top: 30px;
 }
 
-.skills-extra i {
+.skills-extra .devicon {
+    width: 2rem;
+    height: 2rem;
+    max-width: 2rem;
+    max-height: 2rem;
     font-size: 2rem;
+    display: block;
 }
 
-[data-theme="light"] .skills-extra i {
+[data-theme="light"] .skills-extra .devicon {
     color: var(--drk-green);
 }
 
-[data-theme="dark"] .skills-extra i {
+[data-theme="dark"] .skills-extra .devicon {
     color: var(--lgt-green);
 }
 
@@ -358,15 +363,16 @@
     gap: 20px;
 }
 
-.skill i {
-    font-size: 2rem;
+.skill .devicon {
+    width: 2rem;
+    height: 2rem;
 }
 
-[data-theme="light"] .skill i {
+[data-theme="light"] .skill .devicon {
     color: var(--drk-green);
 }
 
-[data-theme="dark"] .skill i {
+[data-theme="dark"] .skill .devicon {
     color: var(--lgt-green);
 }
 
@@ -398,7 +404,7 @@
     background-color: var(--bg-color);
     border-radius: 10px;
     box-shadow: var(--shadow-color) 0px 1px 5px;
-    font-family: Roboto;
+    font-family: "Roboto";
 }
 
 .about-section [aria-label]:hover::after {
@@ -427,6 +433,7 @@
     border-radius: 4px;
     transition: var(--transition);
 }
+
 .about-tech-skills:has(.skills-extra.show) .status-fill {
     width: var(--largura);
 }
@@ -495,7 +502,7 @@
     background-color: var(--lgt-green);
 }
 
-.timeline-dot.inactive{
+.timeline-dot.inactive {
     opacity: 0.50;
 }
 
