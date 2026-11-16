@@ -1,5 +1,8 @@
 /* Fonte padrão do site */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-VariableFont_wdth\,wght.ttf');
+}
 
 * {
     margin: 0;
@@ -47,18 +50,18 @@ p {
 
 /* Responsividade dos elementos globais */
 @media screen and (max-width: 768px) {
-    section{
+    section {
         height: 100%;
         padding: 15px;
     }
 }
 
-[data-theme="light"] ::selection{
+[data-theme="light"] ::selection {
     background-color: var(--lgt-green);
     color: var(--txt-color);
 }
 
-[data-theme="dark"] ::selection{
+[data-theme="dark"] ::selection {
     background-color: var(--drk-green);
     color: var(--txt-color);
 }
