@@ -38,21 +38,25 @@
     "certificate-text1": "Curso voltado para fundamentos de hardware, software, manutenção de computadores e noções básicas de redes e suporte técnico.",
     "certificate-text2": "Certificação de inglês avaliando compreensão auditiva e leitura para situações do dia a dia e ambiente profissional."
   },
-    "project": {
+  "project": {
     "id": "PROJETOS",
-    "social-btn": "Acesse o GitHub",
-    "id-card1": "Acadêmicos",
-    "id-card2":"Pessoais",
-    "id-card3": "Profissionais",
+    "social-btn": "Acessar o GitHub",
+    "id-card1": "Acadêmico",
+    "id-card2": "Pessoal",
+    "id-card3": "Profissional",
     "id-card1-p1": "Sistema web com a missão de facilitar o aprendizado de metodologias ágeis. Oferece atividades para testar e validar seu conhecimento.",
-    "id-card1-p2":"- Atuei como Scrum Master e desenvolvi integrações entre frontend e APIs REST em JavaScript",
-    "id-card1-p3":"- Refatorei o backend para melhorar legibilidade, manutenção e escalabilidade do código.",
-    "id-card2-p1":"Aplicativo de produtividade que une gerenciamento de tarefas e a técnica pomodoro. Ele te ajuda a organizar o seudia e manter o foco no que realmente importa.",
-    "id-card2-p2":"- Defini os requisitos e as regras de negócio dividindo-os em três sprints",
-    "id-card2-p3":"- Desenvolvi o frontend focando em responsavidade e um bom UX e UI",
-    "id-card3-p1":"Site que ensinsa na prática as principais tendências tecnológicas, desenvolve habilidades inovadoras e conquista resultados reais para sua carreira.",
-    "id-card3-p2":"- Prototipei soluções no Figma com interfaces intuitivas e funcionais.",
-    "id-card3-p3":"- Colaborei com o fundador aplicando comunicação assertiva e entendendo o impacto técnico do projeto."
+    "id-card1-p2": "- Atuei como Scrum Master e desenvolvi integrações entre frontend e APIs REST em JavaScript.",
+    "id-card1-p3": "- Refatorei o backend para melhorar legibilidade, manutenção e escalabilidade do código.",
+    "id-card2-p1": "Aplicativo de produtividade que une gerenciamento de tarefas e a técnica Pomodoro. Ele te ajuda a organizar o seu dia e manter o foco no que realmente importa.",
+    "id-card2-p2": "- Defini os requisitos e as regras de negócio, dividindo-os em três sprints.",
+    "id-card2-p3": "- Desenvolvi o frontend com foco em responsividade e uma boa experiência de usuário (UX/UI).",
+    "id-card3-p1": "Site que ensina na prática as principais tendências tecnológicas, desenvolve habilidades inovadoras e ajuda a conquistar resultados reais para sua carreira.",
+    "id-card3-p2": "- Prototipei soluções no Figma com interfaces intuitivas e funcionais.",
+    "id-card3-p3": "- Colaborei com o fundador, aplicando comunicação assertiva e compreendendo o impacto técnico do projeto.",
+    "id-card4": "Profissionais",
+    "id-card4-p1": "Plataforma web voltada à sustentabilidade, desenvolvida para conectar as soluções construídas e aprimorar funcionalidades já existentes.",
+    "id-card4-p2": "- Atuei como Product Owner (PO), realizando o alinhamento entre cliente, equipe de desenvolvimento, design e frontend.",
+    "id-card4-p3": "- Organizei requisitos e prioridades, acompanhando as entregas e promovendo a integração entre as diferentes áreas do projeto."
   },
   "contact": {
     "h1": "Entre em <span class=\"green-text\">contato</span>!",

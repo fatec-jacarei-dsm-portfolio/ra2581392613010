@@ -3,7 +3,6 @@ var bannerImg = document.querySelector(".banner-img");
 var swipeAnimation = document.querySelector(".swipe-animation");
 var cardImg = document.querySelectorAll(".project-card-img");
 const html = document.querySelector("html");
-const hCaptcha = document.getElementById("h-captcha");
 
 /* 
 -=-=-=-=-=-=-
@@ -30,7 +29,7 @@ function updateBanner(theme) {
 
 /*
 -=-=-=-=-=-=-=-
-ALTERA AIMAÇÃO  
+ALTERA ANIMAÇÃO  
 -=-=-=-=-=-=-=-
 */
 
@@ -124,8 +123,6 @@ themeBtn.addEventListener("click", () => {
   const currentTheme = html.getAttribute("data-theme");
 
   const newTheme = currentTheme === "dark" ? "light" : "dark";
-
-  const titleTheme = currentTheme === "dark" ? "Modo Escuro" : "Modo Claro";
 
   setTheme(newTheme);
 });

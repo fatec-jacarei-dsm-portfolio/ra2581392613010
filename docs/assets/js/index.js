@@ -12,7 +12,6 @@ window.addEventListener('scroll', () =>{
  
   const scroll = window.scrollY;
   const documentHeight = document.documentElement.scrollHeight;
-  console.log(documentHeight)
 
   const screenHeight = window.innerHeight;
 
@@ -105,7 +104,6 @@ document.querySelectorAll(".box").forEach((box) => {
   observerBox.observe(box);
 });
 
-// Animação de surgimento de conteúdo na tela
 
 const observerSkills = new IntersectionObserver((entriesSkills) => {
   entriesSkills.forEach((entryskills) => {
@@ -222,4 +220,52 @@ if (swipeGif) {
   );
 
   observerCard.observe(swipeGif);
+}
+
+
+const projectsCarousel = document.getElementById("project-section-projects");
+const prevProject = document.getElementById("project-prev");
+const nextProject = document.getElementById("project-next");
+
+if (projectsCarousel && prevProject && nextProject) {
+
+    function updateCarouselButtons() {
+        const maxScroll =
+            projectsCarousel.scrollWidth - projectsCarousel.clientWidth;
+
+        prevProject.disabled = projectsCarousel.scrollLeft <= 5;
+        nextProject.disabled =
+            projectsCarousel.scrollLeft >= maxScroll - 5;
+    }
+
+    function scrollProjects(direction) {
+        const card = projectsCarousel.querySelector(".project-card");
+
+        if (!card) return;
+
+        const gap = parseFloat(
+            getComputedStyle(projectsCarousel).gap
+        ) || 0;
+
+        const scrollAmount = card.offsetWidth + gap;
+
+        projectsCarousel.scrollBy({
+            left: direction * scrollAmount,
+            behavior: "smooth"
+        });
+    }
+
+    prevProject.addEventListener("click", () => {
+        scrollProjects(-1);
+    });
+
+    nextProject.addEventListener("click", () => {
+        scrollProjects(1);
+    });
+
+    projectsCarousel.addEventListener("scroll", updateCarouselButtons);
+
+    window.addEventListener("resize", updateCarouselButtons);
+
+    updateCarouselButtons();
 }
